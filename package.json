@@ -9,7 +9,7 @@
     "export": "next build && next export",
     "copy-ds-public": "cp -R node_modules/@backstabbersgame/design-system/public/* public/design-system/ || true",
     "build": "npm run copy-ds-public && next build",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out -r https://x-access-token:${GITHUB_TOKEN}@github.com/backstabbersgame/landing-page.git"
   },
   "dependencies": {
     "@backstabbersgame/design-system": "1.0.11",
