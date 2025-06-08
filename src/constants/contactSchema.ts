@@ -30,23 +30,25 @@ export const contactSchema = yup.object({
     .test('is-valid-email', 'E-mail inválido', (value) => validateEmail(value)),
   subject: yup.string().optional(),
   message: yup.string().required('Mensagem é obrigatória'),
-  type: yup.string().optional(), //.oneOf(EU_SOU_OPCOES).optional(),
-  // file: yup
-  //   .mixed<File>()
-  //   .nullable()
-  //   .optional()
-  //   .test('file-type', 'Tipo de arquivo inválido', (file) => {
-  //     if (!file) return true;
-  //     return supportedTypes.includes(file.type);
-  //   })
-  //   .test(
-  //     'file-size',
-  //     `Tamanho máximo do arquivo ${(MAX_FILE_SIZE / (1024 * 1024)).toFixed(
-  //       0
-  //     )} MB`,
-  //     (file) => {
-  //       if (!file) return true;
-  //       return file.size <= MAX_FILE_SIZE;
-  //     }
-  //   ),
+  contactType: yup.string().optional(),
+  file: yup
+    .mixed<File>()
+    .nullable()
+    .optional()
+    .test('file-type', 'Tipo de arquivo inválido', (file) => {
+      if (!file) return true;
+      return supportedTypes.includes(file.type);
+    })
+    .test(
+      'file-size',
+      `Tamanho máximo do arquivo ${(MAX_FILE_SIZE / (1024 * 1024)).toFixed(
+        0
+      )} MB`,
+      (file) => {
+        if (!file) return true;
+        return file.size <= MAX_FILE_SIZE;
+      }
+    ),
 });
+
+export type ContactFormValues = yup.InferType<typeof contactSchema>;
