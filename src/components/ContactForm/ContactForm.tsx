@@ -18,9 +18,6 @@
 // import contactContent from '../../content/contact.json';
 // import { contactSchema, ContactFormValues } from '../../constants/contactSchema';
 // import { sendContact } from 'src/store/contactThunk';
-
-// const contact = contactContent;
-
 // const ContactForm = () => {
 //   const dispatch = useDispatch();
 //   const [form, setForm] = useState<ContactFormValues>({
