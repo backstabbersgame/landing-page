@@ -19,7 +19,7 @@ import {
   YoutubeLogo,
 } from '@phosphor-icons/react/dist/ssr';
 import contactContent from 'src/content/contact.json';
-import ContactForm from '../ContactForm/ContactForm';
+// import ContactForm from '../ContactForm/ContactForm';
 
 const contact = contactContent;
 
@@ -50,7 +50,7 @@ const Contact = () => {
           </div>
         </header>
         <section className={styles['contact-form']}>
-          <ContactForm />
+          {/* <ContactForm /> */}
           {/* <div className={styles['contact-inputs']}>
             <div className={styles['contact-inputs-1']}>
               <InputText

@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import customerReducer from './customerSlice';
 import addressReducer from './addressSlice';
-import contactReducer from './contactSlice';
+// import contactReducer from './contactSlice';
 
 export const store = configureStore({
   reducer: {
     address: addressReducer,
     customer: customerReducer,
-    contact: contactReducer,
+    // contact: contactReducer,
   },
 });
 

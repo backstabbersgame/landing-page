@@ -28,23 +28,15 @@
     ]
   },
   "include": [
+    "**/*.ts",
+    "**/*.tsx",
     "next-env.d.ts",
-    "global.d.ts",
-    "src/**/*",
-    ".next/types/**/*.ts",
-    "src/types/**/*",
-    "../../next-env.d.ts",
-    "../../**/*.ts",
-    "../../**/*.tsx",
-    "../../.next/types/**/*.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "next.config.ts",
-    "**/*.test.ts",
-    "**/*.spec.ts",
-    "**/*.stories.ts",
-    "**/*.stories.tsx"
+    "out",
+    ".next",
+    "dist"
   ]
 }

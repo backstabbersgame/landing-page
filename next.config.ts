@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   webpack(config) {
@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     return config;
   },
   reactStrictMode: false,
+  output: 'export',
 };
 
 export default nextConfig;

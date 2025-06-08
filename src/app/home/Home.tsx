@@ -7,7 +7,6 @@ import Game from '../../components/Game/Game';
 import About from 'src/components/About/About';
 import Store from 'src/components/Store/Store';
 import Newsletter from 'src/components/Newsletter/Newsletter';
-import Contact from 'src/components/Contact/Contact';
 import Header from 'src/components/Header/Header';
 import Footer from 'src/components/Footer/Footer';
 
@@ -28,7 +27,6 @@ const Home = () => {
       <div
         style={{ height: 50, width: '100%', backgroundColor: '#ffffff' }}
       ></div>
-      {/* <Contact /> */}
       <Newsletter />
       <Footer />
     </>
