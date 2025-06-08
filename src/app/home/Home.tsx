@@ -25,7 +25,10 @@ const Home = () => {
         <About />
         <Store />
       </div>
-      <Contact />
+      <div
+        style={{ height: 50, width: '100%', backgroundColor: '#ffffff' }}
+      ></div>
+      {/* <Contact /> */}
       <Newsletter />
       <Footer />
     </>
