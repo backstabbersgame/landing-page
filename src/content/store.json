@@ -1,0 +1,41 @@
+{
+  "icon": "/images/shopping-cart.svg",
+  "iconAlt": "Carinho de compras",
+  "titleOne": "Novidades na",
+  "titleTwo": "lojinha",
+  "titleThree": "!",
+  "collectibles": {
+    "image": {
+      "alt": "Colecionáveis: bottons, camisetas e ecobags",
+      "mobile":"/images/mobile/collectibles.png",
+      "desktop":"/images/desktop/collectibles.png"
+    }
+  },
+  "boardgames": {
+    "image": {
+      "alt": "Caixa do jogo Backstabbers",
+      "mobile":"/images/mobile/boardgames.png",
+      "desktop": "/images/desktop/boardgames.png"
+    }
+  },
+  "payments": [
+    {
+      "icon": "/images/lock-key.svg",
+      "iconAlt": "Cadeado",
+      "title": "COMPRA 100% SEGURA",
+      "subtitle": "Lorem ipsum dolor"
+    },
+    {
+      "icon": "/images/credit-card.svg",
+      "iconAlt": "Cartão de crédito",
+      "title": "PAGUE COMO QUISER",
+      "subtitle": "Lorem ipsum dolor"
+    },
+    {
+      "icon": "/images/truck.svg",
+      "iconAlt": "Caminhão",
+      "title": "ENTREGA PARA TODO BRASIL",
+      "subtitle": "Lorem ipsum dolor"
+    }
+  ]
+}

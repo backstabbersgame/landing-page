@@ -1,0 +1,30 @@
+{
+  "icon": "/images/envelope-simple.svg",
+  "iconAlt": "Envelope",
+  "title": "Entre em contato",
+  "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\\nelementum enim sed sed tristique fringilla.",
+  "placeholders": {
+    "name": "Nome*",
+    "email": "E-mail*",
+    "subject": "Assunto",
+    "message": "Mensagem*"
+  },
+  "selectOptions": [
+    { "value": "", "label": "Eu sou...", "disabled": true },
+    { "value": "Artista", "label": "Artista" },
+    { "value": "Cliente", "label": "Cliente" },
+    { "value": "Designer", "label": "Designer" },
+    { "value": "Imprensa", "label": "Imprensa" },
+    { "value": "Logista", "label": "Logista" },
+    { "value": "Tabuleria", "label": "Tabuleria" }
+  ],
+  "submitLabel": "Enviar",
+  "communityTitle": "Entre para nossa comunidade",
+  "communityButton": "Entrar na comunidade",
+  "socialsTitle": "Siga nossas redes etc",
+  "socialLinks": [
+    { "icon": "InstagramLogo", "href": "https://www.instagram.com/" },
+    { "icon": "YoutubeLogo", "href": "https://www.youtube.com/" },
+    { "icon": "TiktokLogo", "href": "https://www.tiktok.com/" }
+  ]
+}

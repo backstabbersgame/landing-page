@@ -1,0 +1,14 @@
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+.btn {
+  width: 48px;
+  align-self: stretch;
+  background-color: rgba(colors.$neutral-0, 0.15);
+  border: 1px solid rgba(colors.$neutral-0, 0.25);
+}
+
+.btn svg {
+  fill: colors.$neutral-500;
+}

@@ -1,0 +1,164 @@
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/typography' as typography;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+.store {
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.store-container {
+  width: 88vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.store-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-title-one,
+.section-title-two {
+  font-size: typography.$font-size-24;
+}
+
+.section-title-one {
+  color: colors.$neutral-800;
+}
+
+.section-title-two {
+  color: colors.$primary-500;
+}
+
+.store-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.store-merch {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.merch {
+  width: 100%;
+  height: auto;
+}
+
+.store-payments {
+  width: 100%;
+  height: fit-content;
+  background-color: colors.$neutral-0;
+  padding: 8px 16px;
+  border-radius: 4.81px;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.p {
+  color: colors.$neutral-800;
+  font-size: typography.$font-size-12;
+  font-weight: typography.$font-weight-bold;
+}
+
+.subp {
+  color: colors.$neutral-500;
+  font-weight: typography.$font-weight-regular;
+}
+
+.line {
+  border: none;
+  margin: 4px 0;
+  height: 1px;
+  background-color: colors.$neutral-300;
+}
+
+@media only screen and (min-width: breakpoints.$laptop-min) {
+  .store-container {
+    padding: 64px 0;
+  }
+  .store-header {
+    margin-bottom: 48px;
+  }
+
+  .store-content {
+    align-items: center;
+  }
+
+  .store-merch {
+    flex-direction: row;
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .merch {
+    width: 49%;
+  }
+
+  .store-payments {
+    display: flex;
+    height: fit-content;
+    padding: 20px 27px;
+    gap: 16px;
+    width: fit-content;
+    border-radius: 16px;
+  }
+
+  .payment {
+    gap: 16px;
+    width: 308px;
+  }
+
+  .p {
+    color: colors.$neutral-800;
+    font-size: typography.$font-size-16;
+    font-weight: typography.$font-weight-extra-bold;
+  }
+
+  .subp {
+    color: colors.$neutral-500;
+    font-size: typography.$font-size-14;
+    font-weight: typography.$font-weight-regular;
+  }
+
+  .line {
+    width: 2px;
+    height: 44px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$ultra-wide-screen) {
+  .store-container {
+    width: 70vw;
+  }
+}

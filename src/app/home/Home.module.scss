@@ -1,0 +1,48 @@
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/typography' as
+  typography;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+.stars {
+  width: 100vw;
+  height: fit-content;
+  background-image: url('/images/mobile/stars.svg'),
+    url('/images/mobile/blur.svg');
+  background-repeat: no-repeat;
+  background-position: center, top right;
+  background-size: 100% auto, 60% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-section {
+  width: 88vw;
+}
+
+.gradient {
+  z-index: 0;
+  margin-top: -2px;
+  background: linear-gradient(
+    180deg,
+    colors.$neutral-0 0%,
+    colors.$neutral-100 100%
+  );
+}
+
+@media only screen and (min-width: breakpoints.$laptop-min) {
+  .stars {
+    background-image: url('/images/desktop/stars.svg'),
+      url('/images/desktop/blur.svg');
+    background-repeat: no-repeat;
+    background-position: center, top right;
+    background-size: 100% auto, 60% auto;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$ultra-wide-screen) {
+  .hero-section {
+    width: 70vw;
+  }
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "name": "Backstabbers Expansion",
+    "images": {
+      "mobile": {
+        "src": "/images/mobile/backstabbers-expansion.png",
+        "width": 320,
+        "height": 285
+      },
+      "desktop": {
+        "src": "/images/desktop/backstabbers-expansion.png",
+        "width": 620,
+        "height": 394
+      }
+    },
+    "details": [
+      {
+        "iconSrc": "/images/sketch-logo.svg",
+        "iconAlt": "Diamante com gradiente",
+        "title": "Mais de 300 cópias vendidas",
+        "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\nelementum enim sed sed tristique fringilla."
+      },
+      {
+        "iconSrc": "/images/sword.svg",
+        "iconAlt": "Espada",
+        "title": "4 modos de jogo",
+        "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\nelementum enim sed sed tristique fringilla."
+      },
+      {
+        "iconSrc": "/images/heart.svg",
+        "iconAlt": "Coração",
+        "title": "3 expansões",
+        "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\nelementum enim sed sed tristique fringilla."
+      }
+    ],
+    "buttonText": "Detalhes do jogo"
+  },
+  {
+    "id": 2,
+    "name": "Backstabbers Expansion",
+    "images": {
+      "mobile": {
+        "src": "/images/outro-jogo-mobile.png",
+        "width": 320,
+        "height": 285
+      },
+      "desktop": {
+        "src": "/images/outro-jogo-desktop.png",
+        "width": 620,
+        "height": 394
+      }
+    },
+    "details": [
+      {
+        "iconSrc": "/images/sketch-logo.svg",
+        "iconAlt": "Diamante com gradiente",
+        "title": "Mais de 300 cópias vendidas",
+        "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\nelementum enim sed sed tristique fringilla."
+      },
+      {
+        "iconSrc": "/images/sword.svg",
+        "iconAlt": "Espada",
+        "title": "4 modos de jogo",
+        "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\nelementum enim sed sed tristique fringilla."
+      },
+      {
+        "iconSrc": "/images/heart.svg",
+        "iconAlt": "Coração",
+        "title": "3 expansões",
+        "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\nelementum enim sed sed tristique fringilla."
+      }
+    ],
+    "buttonText": "Detalhes do jogo"
+  }
+]

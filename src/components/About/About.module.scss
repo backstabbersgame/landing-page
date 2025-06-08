@@ -1,0 +1,255 @@
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/typography' as
+  typography;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+.about {
+  height: fit-content;
+  width: 100vw;
+  z-index: 0;
+  margin-top: -2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container {
+  width: 88vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2vh;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-title-one,
+.section-title-two {
+  font-size: typography.$font-size-24;
+}
+
+.section-title-one {
+  color: colors.$neutral-800;
+}
+
+.section-title-two {
+  color: colors.$primary-500;
+}
+
+.picture {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  padding: 20px 0;
+}
+
+.picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.about-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-p {
+  color: colors.$neutral-600;
+  font-size: typography.$font-size-14;
+  font-weight: typography.$font-weight-regular;
+}
+
+.about-p strong {
+  color: colors.$neutral-800;
+}
+
+.about-data {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 0 32px 0;
+  width: 100%;
+}
+
+.data {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.data h2 {
+  color: colors.$neutral-800;
+}
+
+.data h4 {
+  color: colors.$neutral-500;
+  font-weight: typography.$font-weight-extra-bold;
+}
+
+.btn {
+  width: 200px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: breakpoints.$tablet-min) and (max-width: breakpoints.$tablet-max) {
+  .about-data {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .data {
+    margin-left: 0;
+  }
+
+  .btn {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (min-width: breakpoints.$laptop-min) {
+  .about-container {
+    padding-bottom: 64px;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 40px;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+  }
+
+  .picture {
+    padding: 0;
+    width: 43%;
+  }
+
+  .picture img {
+    width: 100%;
+    height: auto;
+  }
+  .about-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .about-p {
+    width: fit-content;
+    white-space: pre-line;
+  }
+
+  .about-data {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 32px;
+    padding: 0;
+  }
+
+  .data {
+    margin-left: 0;
+  }
+
+  .btn {
+    margin-bottom: 0;
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (min-width: breakpoints.$desktop-min) {
+  .about-content {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 40px;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+  }
+
+  .picture {
+    padding: 0;
+    width: 43%;
+  }
+
+  .picture img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about-p {
+    width: fit-content;
+    white-space: pre-line;
+  }
+
+  .about-data {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .data {
+    margin-left: 0;
+    width: 200px;
+  }
+
+  .btn {
+    margin-bottom: 0;
+    transform: translateX(0);
+  }
+}
+
+// @media only screen and (min-width: breakpoints.$wide-screen){
+//   .btn {
+//     transform: translateX(0);
+//   }
+// }
+
+@media only screen and (min-width: breakpoints.$ultra-wide-screen) {
+  .about-container {
+    width: 70vw;
+  }
+
+  .picture {
+    padding: 0;
+    width: 40%;
+  }
+
+  .about-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+// $tablet-min: 768px;
+// $tablet-max: 1032px;
+// $laptop-min: 1033px;
+// $laptop-max: 1280px;
+// $desktop-min: 1281px;
+// $desktop-max: 1440px;
+// $wide-screen: 1441px;
+// $ultra-wide-screen: 1513px;

@@ -1,0 +1,47 @@
+{
+  "logo": {
+    "alt": "Solara logo",
+    "mobile": "/images/solara-horizontal-light.svg",
+    "desktop":  "/images/solara-light.svg"
+  },
+  "sections": [
+    {
+      "title": "Ajuda",
+      "className": "ajuda",
+      "links": [
+        { "icon": "Chats", "label": "Fale com a gente" },
+        { "icon": "Bag", "label": "Quero vender" },
+        { "icon": "Truck", "label": "Política de frete" }
+      ]
+    },
+    {
+      "title": "Produtos",
+      "className": "produtos",
+      "links": [
+        { "icon": "Sword", "label": "Nossos jogos" },
+        { "icon": "HourglassLow", "label": "Em breve!" },
+        { "icon": "ShoppingCart", "label": "Lojinha" }
+      ]
+    },
+    {
+      "title": "Solara",
+      "className": "solara",
+      "links": [
+        { "icon": "UsersThree", "label": "Quem somos" },
+        { "icon": "ThumbsUp", "label": "Parcerias" },
+        { "icon": "Question", "label": "FAQ" }
+      ]
+    },
+    {
+      "title": "Redes sociais",
+      "className": "sociais",
+      "links": [
+        { "icon": "InstagramLogo", "label": "Instagram" },
+        { "icon": "YoutubeLogo", "label": "YouTube" },
+        { "icon": "TiktokLogo", "label": "Tik Tok" }
+      ]
+    }
+  ],
+  "legal": ["Privacidade", "Termos de Uso"],
+  "copyright": "Copyright 2025 © Solara Studios"
+}

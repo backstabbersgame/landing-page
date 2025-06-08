@@ -1,0 +1,13 @@
+{
+  "forms": {
+    "mobile": "/images/mobile/game-section-forms.svg",
+    "desktop": "/images/desktop/game-section-forms.svg"
+  },
+  "icon": "/images/rocket.svg",
+  "iconAlt": "Foguete",
+  "titleOne": "Conheça",
+  "titleTwo": "nossos jogos",
+  "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\\nelementum enim sed sed tristique fringilla.",
+  "buttonLabel": "Ver todos os jogos",
+  "waveAlt": "Ondas em degradê"
+}

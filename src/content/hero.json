@@ -1,0 +1,12 @@
+{
+  "title": "Lorem ipsum dolor\\nsit amet consect",
+  "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\\nelementum enimsed sed tristique fringilla phasellus. Sit\\naliquet elementum enim.",
+  "primary": {
+    "label": "Label",
+    "link": "/"
+  },
+  "tertiary": {
+    "label": "Label",
+    "link": "/"
+  }
+}

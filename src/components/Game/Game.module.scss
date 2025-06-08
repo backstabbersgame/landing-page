@@ -1,0 +1,230 @@
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/typography' as typography;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+.game {
+  border-top-style: solid;
+  border-top-color: colors.$neutral-600;
+  width: 100vw;
+  height: fit-content;
+  background-color: colors.$neutral-900;
+  z-index: 0;
+  margin-top: -4.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0 0 0;
+}
+
+.game-container {
+  width: 88vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-content {
+  width: 100%;
+}
+
+.game-p {
+  color: colors.$neutral-300;
+  font-weight: typography.$font-weight-regular;
+  font-size: typography.$font-size-16;
+  padding-bottom: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-title-one,
+.section-title-two {
+  font-size: typography.$font-size-24;
+}
+
+.section-title-one {
+  color: colors.$neutral-400;
+}
+
+.section-title-two {
+  color: colors.$neutral-0;
+}
+
+.carousel {
+  width: 100%;
+  margin-bottom: 28px;
+}
+.image {
+  padding-bottom: 21px;
+  height: auto;
+  width: 100%;
+}
+
+.detail-title {
+  font-size: typography.$font-size-20;
+  color: colors.$neutral-0;
+  padding: 8px 0 4px 0;
+}
+
+.detail-p {
+  color: colors.$neutral-300;
+}
+
+.line {
+  border: none;
+  margin: 24px 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4547a9 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.btn {
+  width: 88vw;
+  justify-content: center;
+  margin: 32px 0 28px 0;
+}
+
+@media only screen and (min-width: breakpoints.$tablet-min) {
+  .game {
+    margin-top: -12px;
+  }
+
+  .game-content {
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+    justify-content: space-between;
+  }
+
+  .image {
+    width: 50%;
+    padding-bottom: 0;
+  }
+
+  .game-p {
+    white-space: pre-line;
+  }
+
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    // width: 33.5%;
+  }
+
+  .detail {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .detail-p {
+    white-space: normal;
+    font-size: typography.$font-size-14;
+  }
+
+  .line {
+    margin: 21px 0;
+  }
+
+  .btn {
+    width: 15vw;
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  .link {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: -3.7vh;
+    margin-right: 0vw;
+    align-self: flex-end;
+    width: fit-content;
+    transform: none;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$laptop-min) {
+  .game {
+    margin-top: -12px;
+  }
+
+  .game-content {
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+    justify-content: space-between;
+  }
+
+  .image {
+    width: auto;
+    padding-bottom: 0;
+  }
+
+  .game-p {
+    white-space: pre-line;
+  }
+
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    width: 33.5%;
+  }
+
+  .detail {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .detail-p {
+    white-space: normal;
+    font-size: typography.$font-size-14;
+  }
+
+  .line {
+    margin: 21px 0;
+  }
+
+  .btn {
+    width: 15vw;
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  .link {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: -3.7vh;
+    margin-right: 0vw;
+    align-self: flex-end;
+    width: fit-content;
+    transform: none;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$desktop-min) {
+  .details-container {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$wide-screen) {
+  .details-container {
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$ultra-wide-screen) {
+  .game-container {
+    width: 70vw;
+  }
+}

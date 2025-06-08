@@ -1,0 +1,77 @@
+@use '@backstabbersgame/design-system/styles/partials/spaces' as spaces;
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/typography' as typography;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: typography.$base-font-family;
+  line-height: typography.$line-height-100;
+  background: linear-gradient(178.53deg, #171424 1.25%, #0c032b 85.26%);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: typography.$heading-font;
+  line-height: typography.$line-height-120;
+}
+
+h1 {
+  font-weight: typography.$font-weight-extra-bold;
+  font-size: typography.$font-size-32;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: typography.$font-weight-bold;
+}
+
+h2 {
+  font-size: typography.$font-size-24;
+}
+
+h3 {
+  font-size: typography.$font-size-20;
+}
+
+h4 {
+  font-size: typography.$font-size-16;
+}
+
+p {
+  font-family: typography.$paragraph-font;
+  line-height: typography.$line-height-150;
+}
+
+input,
+span {
+  font-family: typography.$base-font-family;
+}
+
+a {
+  text-decoration: none;
+}

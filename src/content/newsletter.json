@@ -1,0 +1,15 @@
+{
+  "title": "Fique por dentro etc etc",
+  "description": "Lorem ipsum dolor sit amet consectetur.\\nSit aliquet elementum enim sed sed\\ntristique fringilla.",
+  "emailPlaceholder": "E-mail*",
+  "buttonLabel": "Assinar a newsletter",
+  "buttonIcon": {
+    "src": "/images/paper-plane.svg",
+    "alt": "Avião de papel"
+  },
+  "image": {
+    "alt": "Personagem",
+    "mobile": "/images/mobile/dealer.png",
+    "desktop": "/images/desktop/dealer.png"
+  }
+}

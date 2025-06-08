@@ -1,0 +1,131 @@
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/typography' as typography;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+.newsletter {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: colors.$neutral-0;
+}
+
+.newsletter-container {
+  width: 88vw;
+  background: linear-gradient(90deg, #4547a9 0%, #282960 100%);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 0 16px;
+  border-radius: 48px;
+  margin: 20px 0;
+}
+
+.newsletter-title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.header {
+  color: colors.$neutral-0;
+  font-size: typography.$font-size-20;
+  font-weight: typography.$font-weight-bold;
+}
+
+.p {
+  color: colors.$neutral-300;
+  font-size: typography.$font-size-14;
+  font-weight: typography.$font-weight-regular;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.email {
+  width: 88vw;
+  margin-bottom: 23px;
+}
+
+.btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.dealer {
+  width: 80%;
+  height: auto;
+  margin-top: 24px;
+  bottom: -1px;
+  position: relative;
+}
+
+@media only screen and (min-width: breakpoints.$laptop-min) {
+  .newsletter {
+    height: fit-content;
+    justify-content: flex-end;
+    overflow: visible;
+    position: relative;
+    padding: 60px 0 56px 0;
+  }
+
+  .newsletter-container {
+    height: 70%;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: normal;
+    margin: 0;
+    position: relative;
+    padding: 0;
+  }
+
+  .newsletter-content {
+    width: 35%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0;
+    right: -15vw;
+    position: relative;
+  }
+
+  .header {
+    font-size: typography.$font-size-32;
+  }
+
+  .p {
+    white-space: pre-line;
+  }
+
+  .email {
+    width: 308px;
+  }
+
+  .btn {
+    width: 308px;
+  }
+
+  .dealer {
+    width: auto;
+    height: 120%;
+    margin-top: 0;
+    left: 7vw;
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$ultra-wide-screen) {
+  .newsletter-container {
+    width: 70vw;
+  }
+
+  .newsletter-content {
+    right: -13vw;
+  }
+}

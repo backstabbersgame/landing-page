@@ -1,0 +1,27 @@
+{
+  "icon": "/images/planet.svg",
+  "iconAlt": "Planeta",
+  "titleOne": "Quem faz a",
+  "titleTwo": "Solara",
+  "titleThree": "?",
+  "picture": "/images/people.png",
+  "pictureAlt": "Pessoas abraçadas sorrindo",
+  "description": "Em 2019, um grupo de amigos se vê diante de uma ideia que tinha crescido para\\nalém deles. Juntando o desejo de criar uma experiência divertida entre amigos e a\\nvontade de representar o mercado de jogos pernambucanos no Brasil, nasce a ",
+  "companyName": "Solara",
+  "descriptionAfterCompany": ",\\num estúdio de jogos que tem como foco a diversão, a diversidade e a representatividade.",
+  "data": [
+    {
+      "value": "+10k",
+      "label": "Lorem ipsum dolor"
+    },
+    {
+      "value": "15k",
+      "label": "Lorem ipsum dolor"
+    },
+    {
+      "value": "+45k",
+      "label": "Lorem ipsum dolor"
+    }
+  ],
+  "buttonLabel": "Saiba mais"
+}

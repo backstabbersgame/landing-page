@@ -1,0 +1,170 @@
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/typography' as typography;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+.footer {
+  height: fit-content;
+  width: 100vw;
+  background-color: colors.$neutral-900;
+}
+
+.footer-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-content {
+  width: 88vw;
+}
+
+.logo {
+  margin-top: 32px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ajuda,
+.produtos,
+.solara,
+.sociais {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.h4 {
+  color: colors.$primary-50;
+  margin-bottom: 14px;
+  font-weight: typography.$font-weight-extra-bold;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button {
+  color: colors.$neutral-0 !important;
+  padding-left: 0;
+  font-weight: typography.$font-weight-semi-bold;
+  width: fit-content;
+}
+
+.button svg {
+  fill: colors.$primary-100 !important;
+}
+
+.brand {
+  width: 100%;
+  border-top: 1px solid colors.$neutral-500;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.brand-buttons {
+  width: 88vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0 18px 0;
+}
+
+.brand-btn {
+  border: none !important;
+  color: colors.$neutral-300 !important;
+  font-weight: typography.$font-weight-semi-bold;
+  padding: 13px 0;
+}
+
+.copyright {
+  color: colors.$neutral-400;
+  margin: 2px 0 18px 0;
+  font-size: typography.$font-size-14;
+}
+
+@media only screen and (min-width: breakpoints.$tablet-min) {
+  .right {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ajuda,
+  .produtos,
+  .solara,
+  .sociais {
+    width: auto;
+  }
+
+  .brand {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 6vw;
+  }
+
+  .brand-buttons {
+    justify-content: flex-end;
+    // justify-content: space-between;
+    width: auto;
+    gap: 16px;
+  }
+
+  .copyright {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$laptop-min) {
+  .footer-content {
+    display: flex;
+    margin-top: 56px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .right {
+    display: flex;
+    gap: 64px;
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .ajuda,
+  .produtos,
+  .solara,
+  .sociais {
+    width: fit-content;
+    margin-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .h4 {
+    align-self: start;
+  }
+}
+
+// @media only screen and (min-width: breakpoints.$laptop-min) {
+// }
+
+// @media only screen and (min-width: breakpoints.$desktop-min) {
+// }
+
+@media only screen and (min-width: breakpoints.$ultra-wide-screen) {
+  .footer-content {
+    width: 70vw;
+  }
+
+  .brand {
+    padding: 0 15vw;
+  }
+}

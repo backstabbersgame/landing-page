@@ -1,0 +1,153 @@
+@use '@backstabbersgame/design-system/styles/partials/colors' as colors;
+@use '@backstabbersgame/design-system/styles/partials/typography' as typography;
+@use '@backstabbersgame/design-system/styles/partials/breakpoints' as
+  breakpoints;
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin-top: 105px;
+  margin-top: 10vh;
+}
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+  position: relative;
+}
+
+.hero-title {
+  color: colors.$neutral-0;
+  white-space: pre-line;
+}
+
+.hero-p {
+  color: colors.$neutral-0;
+  font-weight: typography.$font-weight-regular;
+  font-size: typography.$font-size-16;
+  line-height: typography.$line-height-150;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn {
+  justify-content: center;
+}
+
+.btn a {
+  color: colors.$neutral-0;
+}
+
+.hero-characters {
+  position: relative;
+}
+
+.characters {
+  position: relative;
+  left: -35px;
+  margin-top: -100px;
+  width: 110vw;
+  height: auto;
+  max-width: none;
+}
+
+@media only screen and (min-width: breakpoints.$tablet-min) and (max-width: breakpoints.$tablet-max) {
+  .hero {
+    margin-top: 15vh;
+  }
+
+  .hero-title {
+    white-space: normal;
+  }
+
+  .hero-p {
+    font-size: typography.$font-size-20;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .characters {
+    margin-top: -200px;
+    margin-left: -35px;
+    width: 105vw;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$laptop-min) {
+  .hero {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-side {
+    width: 44%;
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-p {
+    white-space: pre-line;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .btn {
+    width: 200px;
+  }
+
+  .hero-characters {
+    // right: 0;
+  }
+
+  .characters {
+    width: 55vw;
+    left: calc(6vw);
+    height: fit-content;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: breakpoints.$ultra-wide-screen) {
+  .hero {
+    // margin-top: -115px;
+  }
+
+  .hero-characters {
+    // top: -10vh;
+    // margin-top: -10vh;
+  }
+
+  .characters {
+    // left: calc(15vw);
+    margin-top: -200px;
+    max-width: none;
+    width: 50vw;
+    left: 13.5vw;
+  }
+}
