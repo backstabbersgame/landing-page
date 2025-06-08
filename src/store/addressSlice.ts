@@ -71,3 +71,5 @@ export const {
 } = addressSlice.actions;
 
 export default addressSlice.reducer;
+
+export type { AddressState };

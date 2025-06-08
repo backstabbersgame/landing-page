@@ -1,41 +1,48 @@
-// 'use client';
+'use client';
 
-// import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-// import { ContactForm } from 'src/types/contact';
-// import { sendContactForm } from './contactThunk';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { sendContact } from './contactThunk';
 
-// interface ContactState {
-//   loading: boolean;
-//   success: boolean;
-//   error: string | null;
-// }
+interface ContactState {
+  loading: boolean;
+  error: string | null;
+  success: boolean;
+}
 
-// const initialState: ContactState = {
-//   loading: false,
-//   success: false,
-//   error: null,
-// };
+const initialState: ContactState = {
+  loading: false,
+  error: null,
+  success: false,
+};
 
-// const contactSlice = createSlice({
-//   name: 'contact',
-//   initialState,
-//   reducers: {},
-//   extraReducers: (builder) => {
-//     builder
-//       .addCase(sendContactForm.pending, (state) => {
-//         state.loading = true;
-//         state.success = false;
-//         state.error = null;
-//       })
-//       .addCase(sendContactForm.fulfilled, (state) => {
-//         state.loading = false;
-//         state.success = true;
-//       })
-//       .addCase(sendContactForm.rejected, (state, action) => {
-//         state.loading = false;
-//         state.error = action.payload as string;
-//       });
-//   },
-// });
+const contactSlice = createSlice({
+  name: 'contact',
+  initialState,
+  reducers: {
+    resetStatus(state) {
+      state.loading = false;
+      state.error = null;
+      state.success = false;
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(sendContact.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+        state.success = false;
+      })
+      .addCase(sendContact.fulfilled, (state) => {
+        state.loading = false;
+        state.success = true;
+      })
+      .addCase(sendContact.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload as string;
+        state.success = false;
+      });
+  },
+});
 
-// export default contactSlice.reducer;
+export const { resetStatus } = contactSlice.actions;
+export default contactSlice.reducer;

@@ -100,3 +100,5 @@ const customerSlice = createSlice({
 export const { setCustomerField, updateCustomer, resetCustomer } =
   customerSlice.actions;
 export default customerSlice.reducer;
+
+export type { CustomerState };

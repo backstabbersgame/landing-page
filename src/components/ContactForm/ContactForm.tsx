@@ -1,218 +1,175 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { useController, SubmitHandler, useForm } from 'react-hook-form';
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from 'src/store';
-import axios from 'axios';
+// 'use client';
+// import React, { useEffect, useState } from 'react';
+// // import { useController, SubmitHandler, useForm } from 'react-hook-form';
+// import * as yup from 'yup';
+// import { yupResolver } from '@hookform/resolvers/yup';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { AppDispatch, RootState } from 'src/store';
+// import axios from 'axios';
 
-import {
-  Button,
-  InputSelect,
-  InputText,
-  InputTextArea,
-  Upload,
-} from '@backstabbersgame/design-system';
-import styles from './ContactForm.module.scss';
-import contactContent from 'src/content/contact.json';
-import { contactSchema } from 'src/constants/contactSchema';
-import { sendContactForm } from 'src/store/contactThunk';
-// import { ContactForm } from 'src/types/contact';
+// import {
+//   Button,
+//   InputSelect,
+//   InputText,
+//   InputTextArea,
+//   Upload,
+// } from '@backstabbersgame/design-system';
+// import styles from './ContactForm.module.scss';
+// import contactContent from '../../content/contact.json';
+// import { contactSchema, ContactFormValues } from '../../constants/contactSchema';
+// import { sendContact } from 'src/store/contactThunk';
 
-const contact = contactContent;
+// const contact = contactContent;
 
-type FormData = {
-  name: string;
-  email: string;
-  type?: string;
-  subject?: string;
-  file: FileList | null;
-  message: string;
-};
+// const ContactForm = () => {
+//   const dispatch = useDispatch();
+//   const [form, setForm] = useState<ContactFormValues>({
+//     name: '',
+//     email: '',
+//     contactType: '',
+//     subject: '',
+//     file: null,
+//     message: '',
+//   });
+//   const [errors, setErrors] = useState<Partial<ContactFormValues>>({});
+//   const { loading, error, success } = useSelector(
+//     (state: RootState) => state.contact
+//   );
+//   const options = contact.selectOptions;
 
-const ContactForm = () => {
-  // const dispatch: AppDispatch = useDispatch();
-  const options = contact.selectOptions;
+//   const handleChange = (
+//     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+//   ) => {
+//     const { name, value, files } = e.target as any;
+//     setForm((prev) =>
+//       name === 'file'
+//         ? { ...prev, file: files && files[0] ? files[0] : null }
+//         : { ...prev, [name]: value }
+//     );
+//   };
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-    watch,
-  } = useForm<FormData>();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    success?: boolean;
-    message?: string;
-  }>({});
+//   const handleInputChange = (
+//     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+//   ) => {
+//     const { name, value } = e.target;
+//     setForm((prev) => ({
+//       ...prev,
+//       [name]: value,
+//     }));
+//     setErrors((prev) => ({ ...prev, [name]: undefined }));
+//   };
 
-  // const {
-  //   control,
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  //   setValue,
-  //   setError,
-  //   clearErrors,
-  //   watch,
-  //   getValues,
-  //   reset,
-  // } = useForm<ContactForm>({
-  //   resolver: yupResolver(contactSchema),
-  //   mode: 'all',
-  //   // defaultValues: {
-  //   //   file: null,
-  //   // },
-  // });
+//   const handleBlur = async (
+//     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+//   ) => {
+//     const { name, value } = e.target;
+//     try {
+//       await contactSchema.validateAt(name, { ...form, [name]: value });
+//       setErrors((prev) => ({ ...prev, [name]: undefined }));
+//     } catch (err: any) {
+//       setErrors((prev) => ({ ...prev, [name]: err.message }));
+//     }
+//   };
 
-  // const {
-  //   field: { value, onChange },
-  //   fieldState: { error },
-  // } = useController({
-  //   name: 'file',
-  //   control,
-  // });
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     console.log("entrou no handle");
+//     try {
+//       await contactSchema.validate(form, { abortEarly: false });
+//       setErrors({});
+//       dispatch(sendContact(form) as any);
+//     } catch (err: any) {
+//       const formErrors: Partial<ContactFormValues> = {};
+//       if (err.inner) {
+//         err.inner.forEach((validationError: any) => {
+//           formErrors[validationError.path as keyof ContactFormValues] =
+//             validationError.message;
+//         });
+//       }
+//       setErrors(formErrors);
+//     }
+//   };
 
-  // useEffect(() => {
-  //   console.log('Estado contactForm atualizado:', contactForm);
-  // }, [contactForm]);
 
-  useEffect(() => {
-    const subscription = watch((value) => {
-      console.log('📦 Dados atuais do formulário:', value);
-    });
-    return () => subscription.unsubscribe();
-  }, [watch]);
+//   return (
+//     <>
+//       <form
+//         className={styles['contact-form']}
+//         onSubmit={handleSubmit}
+//         noValidate
+//       >
+//         <div className={styles['contact-inputs']}>
+//           <div className={styles['contact-inputs-1']}>
+//             <InputText
+//               key='name'
+//               placeholder={contact.placeholders.name}
+//               className={styles.nome}
+//               onChange={handleInputChange}
+//               onBlur={handleBlur}
+//               required
+//               error={errors.name}
+//             />
+//             <InputText
+//               key='email'
+//               placeholder={contact.placeholders.email}
+//               className={styles.email}
+//               onChange={handleInputChange}
+//               onBlur={handleBlur}
+//               required
+//               error={errors.email}
+//             />
+//           </div>
+//           <div className={styles['contact-inputs-2']}>
+//             <InputSelect
+//               key='contactType'
+//               options={options}
+//               className={styles.eusou}
+//               // onChange={handleInputChange}
+//               // onBlur={handleBlur}
+//               error={errors.contactType}
+//             />
+//             <InputText
+//               key='subject'
+//               placeholder={contact.placeholders.subject}
+//               className={styles.assunto}
+//               onChange={handleInputChange}
+//               onBlur={handleBlur}
+//               error={errors.subject}
+//             />
+//           </div>
+//         </div>
+//         <InputTextArea
+//           key='message'
+//           placeholder={contact.placeholders.message}
+//           className={styles.mensagem}
+//           onChange={handleInputChange}
+//           onBlur={handleBlur}
+//           required
+//           error={errors.message}
+//         />
 
-  // const onSubmit = (data: ContactForm) => {
-  //   // console.log('Dados data:', data);
-  //   console.log('Dados enviados pelo formulário:', { data });
-  //   dispatch(sendContactForm(data)).then((res) => {
-  //     if (res.meta.requestStatus === 'fulfilled') {
-  //       reset(); // limpa o form após sucesso
-  //     } else {
-  //       console.log('erro no dispatch');
-  //     }
-  //   });
-  // };
+//         <Upload
+//           key='file'
+//           className={styles.upload}
+//           // onChange={handleChange}
+//           // error={errors.file}
+//         />
 
-  const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true);
-    setSubmitStatus({});
+//         <div className={styles['submit-container']}>
+//           <Button
+//             type='submit'
+//             className={styles.submit}
+//             disabled={loading}
+//             arrowRight
+//           >
+//             {contact.submitLabel}
+//           </Button>
+//         </div>
+//         {success && <div>Mensagem enviada!</div>}
+//         {error && <div>{error}</div>}
+//       </form>
+//     </>
+//   );
+// };
 
-    try {
-      const formData = new FormData();
-      formData.append('name', data.name);
-      formData.append('email', data.email);
-      formData.append('type', data.type || '');
-      formData.append('subject', data.subject || '');
-      formData.append('message', data.message);
-      if (data.file?.[0]) formData.append('file', data.file[0]);
-
-      await axios.post('/api/contact', formData);
-      setSubmitStatus({ success: true, message: 'Enviado com sucesso!' });
-      reset();
-    } catch (error) {
-      setSubmitStatus({ success: false, message: 'Erro ao enviar' });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  console.log('errors:', errors);
-  return (
-    <>
-      {console.log('montou')}
-      <form
-        className={styles['contact-form']}
-        onSubmit={() => {
-          alert('submit!');
-        }}
-        // onSubmit={handleSubmit(onSubmit, (formErrors) => {
-        //   console.log('❌ Erros de validação:', formErrors);
-        // })}
-        noValidate
-      >
-        <div className={styles['contact-inputs']}>
-          <div className={styles['contact-inputs-1']}>
-            <InputText
-              key='name'
-              placeholder={contact.placeholders.name}
-              className={styles.nome}
-              required
-              error={errors.name?.message}
-              {...register('name', { required: 'Obrigatório' })}
-            />
-            <InputText
-              key='email'
-              placeholder={contact.placeholders.email}
-              className={styles.email}
-              required
-              error={errors.email?.message}
-              {...register('email', { required: 'Obrigatório' })}
-            />
-          </div>
-          <div className={styles['contact-inputs-2']}>
-            <InputSelect
-              key='type'
-              options={options}
-              className={styles.eusou}
-              error={errors.type?.message}
-              {...register('type')}
-            />
-            <InputText
-              key='subject'
-              placeholder={contact.placeholders.subject}
-              className={styles.assunto}
-              error={errors.subject?.message}
-              {...register('subject')}
-            />
-          </div>
-        </div>
-        <InputTextArea
-          key='message'
-          placeholder={contact.placeholders.message}
-          className={styles.mensagem}
-          required
-          error={errors.message?.message}
-          {...register('message', { required: 'Obrigatório' })}
-        />
-        {submitStatus.message && (
-          <div style={{ color: submitStatus.success ? 'green' : 'red' }}>
-            Mesagem aq:{submitStatus.message}
-          </div>
-        )}
-        {/* <Upload
-        key='file'
-        className={styles.upload}
-        value={value}
-        onChange={onChange}
-        error={error?.message}
-      /> */}
-        <input
-          type='file'
-          {...register('file')}
-        />
-        <div className={styles['submit-container']}>
-          <button
-            type='submit'
-            onClick={() => console.log('oi oi')}
-          >
-            envia carai
-          </button>
-          {/* <Button
-          type='submit'
-          className={styles.submit}
-          arrowRight
-        >
-          {contact.submitLabel}
-        </Button> */}
-        </div>
-      </form>
-    </>
-  );
-};
-
-export default ContactForm;
+// export default ContactForm;
