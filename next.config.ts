@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   },
   reactStrictMode: false,
   output: 'export',
+  basePath: '/landing-page',
+  assetPrefix: '/landing-page/',
 };
 
 export default nextConfig;
