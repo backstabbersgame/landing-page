@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.scss';
 import 'dotenv/config';
 import ClientProvider from './ClientProvider';
-import '@backstabbersgame/design-system/styles/index.scss';
+import '@backstabbersgame/design-system/styles/index.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

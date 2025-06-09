@@ -1,17 +1,9 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg/,
-      use: ['@svgr/webpack'],
-    });
-    return config;
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: false,
   output: 'export',
   basePath: '/landing-page',
   assetPrefix: '/landing-page/',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
