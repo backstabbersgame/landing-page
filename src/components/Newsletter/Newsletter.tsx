@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import styles from './Newsletter.module.scss';
 import { Button, InputText } from '@backstabbersgame/design-system';
 import Image from 'next/image';
@@ -10,6 +11,7 @@ import newsletterContent from 'src/content/newsletter.json';
 const newsletter = newsletterContent;
 
 const Newsletter = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const { currentBreakpoint } = useBreakpoint();
   const isMobile = currentBreakpoint === 'mobile';
 
@@ -44,7 +46,7 @@ const Newsletter = () => {
             <Image
               width={24}
               height={24}
-              src={newsletter.buttonIcon.src}
+              src={`${basePath}${newsletter.buttonIcon.src}`}
               alt={newsletter.buttonIcon.alt}
               className={styles.icon}
             />
@@ -53,7 +55,7 @@ const Newsletter = () => {
         <Image
           width={imageWidth}
           height={imageHeight}
-          src={imageSrc}
+          src={`${basePath}${imageSrc}`}
           alt={newsletter.image.alt}
           className={styles.dealer}
         />

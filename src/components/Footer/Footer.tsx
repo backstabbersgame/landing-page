@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import styles from './Footer.module.scss';
 import Image from 'next/image';
 import { Button } from '@backstabbersgame/design-system';
@@ -26,6 +27,7 @@ const Footer = () => {
   const { currentBreakpoint } = useBreakpoint();
   const isMobile = currentBreakpoint === 'mobile';
   const isMobileOrTablet = isMobile || currentBreakpoint === 'tablet';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <section className={styles.footer}>
@@ -34,14 +36,14 @@ const Footer = () => {
           <div className={styles.logo}>
             {isMobileOrTablet ? (
               <Image
-                src={footer.logo.mobile}
+                src={`${basePath}${footer.logo.mobile}`}
                 alt={footer.logo.alt}
                 width={172.7}
                 height={48}
               />
             ) : (
               <Image
-                src={footer.logo.desktop}
+                src={`${basePath}${footer.logo.desktop}`}
                 alt={footer.logo.alt}
                 width={158.82}
                 height={169}

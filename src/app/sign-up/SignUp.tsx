@@ -6,6 +6,7 @@ import { AppDispatch, RootState } from 'src/store';
 import styles from './SignUp.module.scss';
 import { Grid, Stepper } from '@backstabbersgame/design-system';
 import BackButton from 'src/components/BackButton/BackButton';
+
 import Image from 'next/image';
 import useBreakpoint from 'src/hooks/useBreakpoint';
 import SignUpForm from './SignUpForm';
@@ -24,6 +25,7 @@ const SignUp = () => {
   const [submitData, setSubmitData] = useState(false);
   const [customerSince, setCustomerSince] = useState('');
   const isSubmitting = useRef(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   useEffect(() => {
     setCustomerSince(new Date().toLocaleDateString('pt-BR'));
@@ -117,7 +119,7 @@ const SignUp = () => {
           <Image
             width={widthLogo}
             height={heightLogo}
-            src='/images/solara-horizontal-dark.svg'
+            src={`${basePath}/images/solara-horizontal-dark.svg`}
             alt='Solara Studios Logo with dark colors'
           />
         </div>

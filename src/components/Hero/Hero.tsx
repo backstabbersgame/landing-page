@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import styles from './Hero.module.scss';
 import Image from 'next/image';
 import { Button } from '@backstabbersgame/design-system';
@@ -9,6 +10,7 @@ import heroContent from 'src/content/hero.json';
 const hero = heroContent;
 
 const Hero = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <div className={styles.hero}>
       <div className={styles['hero-side']}>
@@ -50,12 +52,12 @@ const Hero = () => {
       </div>
       <section className={styles['hero-characters']}>
         <Image
-          src='/images/characters.png'
+          src={`${basePath}/images/characters.png`}
           alt={'Characters'}
           width={748}
           height={737}
           placeholder='blur'
-          blurDataURL={'/images/characters.png'}
+          blurDataURL={`${basePath}/images/characters.png`}
           className={styles.characters}
         />
       </section>

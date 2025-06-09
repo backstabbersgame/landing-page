@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import Image from 'next/image';
 import styles from './Contact.module.scss';
 import useBreakpoint from 'src/hooks/useBreakpoint';
@@ -29,6 +30,7 @@ const Contact = () => {
   const isMobileOrTablet = isMobile || currentBreakpoint === 'tablet';
   const [value, setValue] = useState('');
   const options = contact.selectOptions;
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <section className={styles.contact}>
@@ -37,7 +39,7 @@ const Contact = () => {
           <Image
             width={isMobileOrTablet ? 24 : 32}
             height={isMobileOrTablet ? 24 : 32}
-            src={contact.icon}
+            src={`${basePath}${contact.icon}`}
             alt={contact.iconAlt}
           />
           <div className={styles['section-title']}>

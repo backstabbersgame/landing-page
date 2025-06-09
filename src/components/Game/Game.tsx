@@ -2,6 +2,7 @@
 
 import React, { useMemo } from 'react';
 import styles from './Game.module.scss';
+
 import Image from 'next/image';
 import { Button, Carousel } from '@backstabbersgame/design-system';
 import useBreakpoint from 'src/hooks/useBreakpoint';
@@ -15,7 +16,7 @@ const Game = () => {
   const isMobileOrTablet =
     currentBreakpoint === 'mobile' || currentBreakpoint === 'tablet';
   const games = useMemo(() => [...gamesData], []);
-
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const formsSrc = isMobileOrTablet ? game.forms.mobile : game.forms.desktop;
   const formsWidth = isMobileOrTablet ? 611 : 1440;
   const formsHeight = isMobileOrTablet ? 60.13 : 112.38;
@@ -27,7 +28,7 @@ const Game = () => {
           <Image
             width={isMobileOrTablet ? 26 : 32}
             height={isMobileOrTablet ? 26 : 32}
-            src={game.icon}
+            src={`${basePath}${game.icon}`}
             alt={game.iconAlt}
           />
           <div className={styles['section-title']}>
@@ -56,7 +57,7 @@ const Game = () => {
       <Image
         width={formsWidth}
         height={formsHeight}
-        src={formsSrc}
+        src={`${basePath}${formsSrc}`}
         alt={game.waveAlt}
         style={{ width: '100%', height: 'auto' }}
       />

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import Image from 'next/image';
 import styles from './About.module.scss';
 import { Button } from '@backstabbersgame/design-system';
@@ -13,6 +14,7 @@ const About = () => {
   const { currentBreakpoint } = useBreakpoint();
   const isMobile = currentBreakpoint === 'mobile';
   const isMobileOrTablet = isMobile || currentBreakpoint === 'tablet';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <>
@@ -22,7 +24,7 @@ const About = () => {
             <Image
               width={isMobileOrTablet ? 24 : 32}
               height={isMobileOrTablet ? 24 : 32}
-              src={about.icon}
+              src={`${basePath}${about.icon}`}
               alt={about.iconAlt}
             />
             <div className={styles['section-title']}>
@@ -40,7 +42,7 @@ const About = () => {
               <Image
                 width={isMobile ? 356.64 : 524}
                 height={isMobile ? 237.56 : 288}
-                src={about.picture}
+                src={`${basePath}${about.picture}`}
                 alt={about.pictureAlt}
               />
             </div>

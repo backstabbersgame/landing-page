@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import Image from 'next/image';
 import styles from './Store.module.scss';
 import useBreakpoint from 'src/hooks/useBreakpoint';
@@ -9,6 +10,7 @@ import storeContent from 'src/content/store.json';
 const store = storeContent;
 
 const Store = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const { currentBreakpoint } = useBreakpoint();
   const isMobile = currentBreakpoint === 'mobile';
   const isMobileOrTablet = isMobile || currentBreakpoint === 'tablet';
@@ -33,7 +35,7 @@ const Store = () => {
             <Image
               width={isMobileOrTablet ? 24 : 32}
               height={isMobileOrTablet ? 24 : 32}
-              src={store.icon}
+              src={`${basePath}${store.icon}`}
               alt={store.iconAlt}
             />
             <div className={styles['section-title']}>
@@ -51,14 +53,14 @@ const Store = () => {
               <Image
                 width={collectiblesWidth}
                 height={collectiblesHeight}
-                src={collectiblesSrc}
+                src={`${basePath}${collectiblesSrc}`}
                 alt={store.collectibles.image.alt}
                 className={styles.merch}
               />
               <Image
                 width={boardgamesWidth}
                 height={boardgamesHeight}
-                src={boardgamesSrc}
+                src={`${basePath}${boardgamesSrc}`}
                 alt={store.boardgames.image.alt}
                 className={styles.merch}
               />
@@ -71,7 +73,7 @@ const Store = () => {
                     <Image
                       width={24}
                       height={24}
-                      src={payment.icon}
+                      src={`${basePath}${payment.icon}`}
                       alt={payment.iconAlt}
                     />
                     <div>
