@@ -7,8 +7,8 @@
 .stars {
   width: 100vw;
   height: fit-content;
-  background-image: url('/images/mobile/stars.svg'),
-    url('/images/mobile/blur.svg');
+  background-image: url('/landing-page/images/mobile/stars.svg'),
+    url('/landing-page/images/mobile/blur.svg');
   background-repeat: no-repeat;
   background-position: center, top right;
   background-size: 100% auto, 60% auto;
@@ -33,8 +33,8 @@
 
 @media only screen and (min-width: breakpoints.$laptop-min) {
   .stars {
-    background-image: url('/images/desktop/stars.svg'),
-      url('/images/desktop/blur.svg');
+    background-image: url('/landing-page/images/desktop/stars.svg'),
+      url('/landing-page/images/desktop/blur.svg');
     background-repeat: no-repeat;
     background-position: center, top right;
     background-size: 100% auto, 60% auto;
