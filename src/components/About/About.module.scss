@@ -131,7 +131,7 @@
     flex-direction: row-reverse;
     margin-top: 40px;
     width: 100%;
-    height: fit-content;
+    height: fit-content; 
     justify-content: space-between;
   }
 
@@ -147,7 +147,8 @@
   .about-side {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center; // space-between;
+    height: auto; //retirar quando voltar as métricas
     align-items: flex-start;
     gap: 48px;
   }
@@ -197,7 +198,7 @@
   .about-side {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between; // descomentar quando voltar as métricas
   }
 
   .about-p {
@@ -241,7 +242,7 @@
   .about-side {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between; // descomentar quando voltar as métricas
   }
 }
 

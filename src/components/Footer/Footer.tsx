@@ -63,6 +63,7 @@ const Footer = () => {
                       key={idx}
                       variant='link'
                       className={styles.button}
+                      href={link.href}
                     >
                       {link.icon === 'Chats' && <Chats size={24} />}
                       {link.icon === 'Bag' && <Bag size={24} />}
@@ -97,8 +98,9 @@ const Footer = () => {
                 key={idx}
                 className={styles['brand-btn']}
                 variant='link'
+                href={item.href}
               >
-                {item}
+                {item.label}
               </Button>
             ))}
           </div>

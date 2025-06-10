@@ -1,12 +1,12 @@
 {
-  "title": "Lorem ipsum dolor\\nsit amet consect",
-  "description": "Lorem ipsum dolor sit amet consectetur. Sit aliquet\\nelementum enimsed sed tristique fringilla phasellus. Sit\\naliquet elementum enim.",
+  "title": "Não confie em ninguém,\nnem mesmo em você!",
+  "description": "Backstabbers: um battle royale estratégico onde tudo \npode acontecer!",
   "primary": {
-    "label": "Label",
+    "label": "Mais detalhes",
     "link": "/"
   },
   "tertiary": {
-    "label": "Label",
+    "label": "Aprenda a jogar",
     "link": "/"
   }
 }

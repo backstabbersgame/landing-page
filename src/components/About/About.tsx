@@ -52,7 +52,7 @@ const About = () => {
                 <strong>{about.companyName}</strong>
                 {about.descriptionAfterCompany.replace(/\\n/g, '\n')}
               </p>
-              <div className={styles['about-data']}>
+              {/* <div className={styles['about-data']}>
                 {about.data.map((item, index) => (
                   <div
                     key={index}
@@ -68,7 +68,7 @@ const About = () => {
                 className={styles.btn}
               >
                 {about.buttonLabel}
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

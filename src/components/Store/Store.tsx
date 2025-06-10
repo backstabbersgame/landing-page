@@ -51,17 +51,17 @@ const Store = () => {
           <div className={styles['store-content']}>
             <div className={styles['store-merch']}>
               <Image
-                width={collectiblesWidth}
-                height={collectiblesHeight}
-                src={`${basePath}${collectiblesSrc}`}
-                alt={store.collectibles.image.alt}
-                className={styles.merch}
-              />
-              <Image
                 width={boardgamesWidth}
                 height={boardgamesHeight}
                 src={`${basePath}${boardgamesSrc}`}
                 alt={store.boardgames.image.alt}
+                className={styles.merch}
+              />
+              <Image
+                width={collectiblesWidth}
+                height={collectiblesHeight}
+                src={`${basePath}${collectiblesSrc}`}
+                alt={store.collectibles.image.alt}
                 className={styles.merch}
               />
             </div>
@@ -78,7 +78,7 @@ const Store = () => {
                     />
                     <div>
                       <p className={styles.p}>{payment.title}</p>
-                      <p className={styles.subp}>{payment.subtitle}</p>
+                      {/* <p className={styles.subp}>{payment.subtitle}</p> */}
                     </div>
                   </div>
                   {index !== store.payments.length - 1 && (
