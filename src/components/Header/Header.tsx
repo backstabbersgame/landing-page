@@ -9,6 +9,8 @@ import {
   Chats,
   House,
   Rocket,
+  Newspaper,
+  UsersThree,
   ShoppingCart,
 } from '@phosphor-icons/react/dist/ssr';
 import { useRouter } from 'next/navigation';
@@ -88,8 +90,10 @@ const Header = () => {
   const links = [
     { name: 'Início', href: '/' },
     { name: 'Jogos', href: '/jogos' },
-    { name: 'Lojinha', href: '/lojinha' },
-    { name: 'Contato', href: '/contato' },
+    { name: 'Sobre', href: '/sobre' },
+    { name: 'Newsletter', href: '/Newsletter' },
+    // { name: 'Lojinha', href: '/lojinha' },
+    // { name: 'Contato', href: '/contato' },
   ];
 
   const menuItems = [
@@ -104,24 +108,36 @@ const Header = () => {
       label: 'Jogos',
       icon: <Rocket size={24} />,
       href: '/jogos',
-      hasSubMenu: true,
+      hasSubMenu: false,
       subItems: [
-        { id: 'jogo1', label: 'Jogo 1', href: '/jogos/jogo-1' },
-        { id: 'jogo2', label: 'Jogo 2', href: '/jogos/jogo-2' },
+        { id: '', label: '', href: '' },
+        { id: '', label: '', href: '' },
       ],
     },
     {
-      id: 'lojinha',
-      label: 'Lojinha',
-      icon: <ShoppingCart size={24} />,
-      href: '/lojinha',
+      id: 'sobre',
+      label: 'Sobre',
+      icon: <UsersThree size={24} />,
+      href: '/Sobre',
     },
     {
-      id: 'contato',
-      label: 'Contato',
-      icon: <Chats size={24} />,
-      href: '/contato',
+      id: 'newsletter',
+      label: 'Newsletter',
+      icon: <Newspaper size={24} />,
+      href: '/newsletter',
     },
+    // {
+    //   id: 'lojinha',
+    //   label: 'Lojinha',
+    //   icon: <ShoppingCart size={24} />,
+    //   href: '/lojinha',
+    // },
+    // {
+    //   id: 'contato',
+    //   label: 'Contato',
+    //   icon: <Chats size={24} />,
+    //   href: '/contato',
+    // },
   ];
 
   return (
@@ -143,14 +159,14 @@ const Header = () => {
         openSubMenu={openSubMenu}
         onToggleSubMenu={handleToggleSubMenu}
         onNavigate={handleNavigate}
-        footerButton={
-          isMobile
-            ? {
-                label: 'Minha Conta',
-                onClick: handleModalAccountClick,
-              }
-            : undefined
-        }
+        // footerButton={
+        //   isMobile
+        //     ? {
+        //         label: 'Minha Conta',
+        //         onClick: handleModalAccountClick,
+        //       }
+        //     : undefined
+        // }
       />
     </>
   );

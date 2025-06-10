@@ -44,7 +44,7 @@ const Game = () => {
           </p>
         </section>
         <div className={styles.carousel}>
-          <Carousel games={games} />
+          <Carousel games={games} autoPlay={false} />
         </div>
         <Button
           variant='link'
