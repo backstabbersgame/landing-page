@@ -24,9 +24,9 @@ const Home = () => {
         <About />
         <Store />
       </div>
-      <div
+      {/* <div
         style={{ height: 50, width: '100%', backgroundColor: '#ffffff' }}
-      ></div>
+      ></div> */}
       <Newsletter />
       <Footer />
     </>

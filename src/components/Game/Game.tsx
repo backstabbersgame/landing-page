@@ -22,7 +22,10 @@ const Game = () => {
   const formsHeight = isMobileOrTablet ? 60.13 : 112.38;
 
   return (
-    <section className={styles.game}>
+    <section
+      className={styles.game}
+      id='games'
+    >
       <div className={styles['game-container']}>
         <section className={styles.header}>
           <Image
@@ -44,7 +47,10 @@ const Game = () => {
           </p>
         </section>
         <div className={styles.carousel}>
-          <Carousel games={games} autoPlay={false} />
+          <Carousel
+            games={games}
+            autoPlay={false}
+          />
         </div>
         <Button
           variant='link'

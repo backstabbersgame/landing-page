@@ -37,8 +37,8 @@
       "className": "sociais",
       "links": [
         { "icon": "InstagramLogo", "label": "Instagram", "href": "https://www.instagram.com/solarabg/" },
-        { "icon": "YoutubeLogo", "label": "YouTube", "href": "" },
-        { "icon": "TiktokLogo", "label": "Tik Tok", "href": "" }
+        { "icon": "YoutubeLogo", "label": "YouTube", "href": "https://www.youtube.com/@BackstabbersGame" },
+        { "icon": "TiktokLogo", "label": "Tik Tok", "href": "https://www.tiktok.com/@backstabbersgame" }
       ]
     }
   ],

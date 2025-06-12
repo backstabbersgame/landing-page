@@ -29,7 +29,10 @@ const Store = () => {
 
   return (
     <>
-      <section className={styles.store}>
+      <section
+        className={styles.store}
+        id='store'
+      >
         <div className={styles['store-container']}>
           <header className={styles['store-header']}>
             <Image

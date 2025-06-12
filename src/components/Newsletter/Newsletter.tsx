@@ -22,7 +22,10 @@ const Newsletter = () => {
   const imageHeight = isMobile ? 285 : 394;
 
   return (
-    <section className={styles.newsletter}>
+    <section
+      className={styles.newsletter}
+      id='newsletter'
+    >
       <div className={styles['newsletter-container']}>
         <div className={styles['newsletter-content']}>
           <div className={styles['newsletter-title']}>

@@ -5,16 +5,9 @@ import {
   Header as HeaderComponent,
   ModalMenu,
 } from '@backstabbersgame/design-system';
-import {
-  Chats,
-  House,
-  Rocket,
-  Newspaper,
-  UsersThree,
-  ShoppingCart,
-} from '@phosphor-icons/react/dist/ssr';
 import { useRouter } from 'next/navigation';
 import useBreakpoint from 'src/hooks/useBreakpoint';
+import { links, menuItems } from './headerLinks';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,10 +17,20 @@ const Header = () => {
   const isMobile = currentBreakpoint === 'mobile';
   const router = useRouter();
 
+  const scrollToHash = (href: string) => {
+    if (href.startsWith('#')) {
+      const target = document.getElementById(href.substring(1));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const handleLogoClick = () => {
     router.push('/');
     setActiveItem('inicio');
     setOpenSubMenu(undefined);
+    scrollToHash('#inicio');
   };
 
   const handleMenuClick = () => {
@@ -43,6 +46,7 @@ const Header = () => {
 
   const handleLinkClick = (href: string) => {
     // router.push(href);
+    scrollToHash(href);
     const active = links.find((link) => link.href === href)?.name.toLowerCase();
     if (active) {
       setActiveItem(active);
@@ -50,10 +54,10 @@ const Header = () => {
     }
   };
 
- const handleAccountClick = () => {
+  const handleAccountClick = () => {
     // router.push('/account');
-   console.log('Clicou no botão do header');
- };
+    console.log('Clicou no botão do header');
+  };
 
   const handleModalAccountClick = () => {
     // router.push('/account');
@@ -75,6 +79,7 @@ const Header = () => {
 
   const handleNavigate = (href: string) => {
     // router.push(href);
+    scrollToHash(href);
     setIsMenuOpen(false);
     setOpenSubMenu(undefined);
     const menuItem = menuItems.find(
@@ -86,59 +91,6 @@ const Header = () => {
       setActiveItem(menuItem.id);
     }
   };
-
-  const links = [
-    { name: 'Início', href: '/' },
-    { name: 'Jogos', href: '/jogos' },
-    { name: 'Sobre', href: '/sobre' },
-    { name: 'Newsletter', href: '/Newsletter' },
-    // { name: 'Lojinha', href: '/lojinha' },
-    // { name: 'Contato', href: '/contato' },
-  ];
-
-  const menuItems = [
-    {
-      id: 'inicio',
-      label: 'Início',
-      icon: <House size={24} />,
-      href: '/',
-    },
-    {
-      id: 'jogos',
-      label: 'Jogos',
-      icon: <Rocket size={24} />,
-      href: '/jogos',
-      hasSubMenu: false,
-      subItems: [
-        { id: '', label: '', href: '' },
-        { id: '', label: '', href: '' },
-      ],
-    },
-    {
-      id: 'sobre',
-      label: 'Sobre',
-      icon: <UsersThree size={24} />,
-      href: '/Sobre',
-    },
-    {
-      id: 'newsletter',
-      label: 'Newsletter',
-      icon: <Newspaper size={24} />,
-      href: '/newsletter',
-    },
-    // {
-    //   id: 'lojinha',
-    //   label: 'Lojinha',
-    //   icon: <ShoppingCart size={24} />,
-    //   href: '/lojinha',
-    // },
-    // {
-    //   id: 'contato',
-    //   label: 'Contato',
-    //   icon: <Chats size={24} />,
-    //   href: '/contato',
-    // },
-  ];
 
   return (
     <>

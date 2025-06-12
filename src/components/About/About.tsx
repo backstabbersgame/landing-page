@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <>
-      <section className={styles.about}>
+      <section className={styles.about} id='about'>
         <div className={styles['about-container']}>
           <header className={styles['about-header']}>
             <Image
