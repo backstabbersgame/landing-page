@@ -37,10 +37,11 @@ const Newsletter = () => {
     }
 
     try {
-      await addDoc(collection(db, 'subscribers'), {
+      const docRef = await addDoc(collection(db, 'subscribers'), {
         email,
         createdAt: Timestamp.now(),
       });
+      console.log('Email salvo com ID:', docRef.id);
       setStatus('success');
       setEmail('');
       setError('');
