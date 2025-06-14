@@ -1,14 +1,15 @@
 'use client';
+
 import React, { useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from 'src/store';
-import { setCustomerField } from 'src/store/customerSlice';
-import { formatCpf } from 'src/utils/formatCpf';
-import { formatPhone } from 'src/utils/formatPhone';
+import { RootState } from '../../store';
+import { setCustomerField } from '../../store/customerSlice';
+import { formatCpf } from '../../utils/formatCpf';
+import { formatPhone } from '../../utils/formatPhone';
 import { InputText, Button } from '@backstabbersgame/design-system';
 import styles from './StepOneForm.module.scss';
-import { stepOneSchema } from 'src/constants/validationSchema';
+import { stepOneSchema } from '../../constants/validationSchema';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 interface StepOnePros {

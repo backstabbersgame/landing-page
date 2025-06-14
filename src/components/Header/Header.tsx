@@ -6,7 +6,7 @@ import {
   ModalMenu,
 } from '@backstabbersgame/design-system';
 import { useRouter } from 'next/navigation';
-import useBreakpoint from 'src/hooks/useBreakpoint';
+import useBreakpoint from '../../hooks/useBreakpoint';
 import { links, menuItems } from './headerLinks';
 
 const Header = () => {

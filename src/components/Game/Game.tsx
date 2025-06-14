@@ -5,7 +5,7 @@ import styles from './Game.module.scss';
 
 import Image from 'next/image';
 import { Button, Carousel } from '@backstabbersgame/design-system';
-import useBreakpoint from 'src/hooks/useBreakpoint';
+import useBreakpoint from '../../hooks/useBreakpoint';
 import gamesData from '../../content/gamesData.json';
 import gameContent from '../../content/game.json';
 

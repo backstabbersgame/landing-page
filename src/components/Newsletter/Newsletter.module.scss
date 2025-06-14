@@ -48,12 +48,37 @@
 
 .email {
   width: 88vw;
-  margin-bottom: 23px;
 }
 
 .btn {
   width: 100%;
   justify-content: center;
+  margin-top: 23px;
+}
+
+.status-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  height: 24px;
+}
+
+.message {
+  visibility: hidden;
+  height: 100%;
+}
+
+.message.success,
+.message.error {
+  visibility: visible;
+}
+
+.success {
+  color: colors.$feedback-success-500;
+}
+
+.error {
+  color: colors.$feedback-danger-500;
 }
 
 .dealer {

@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-
 import Image from 'next/image';
 import styles from './Contact.module.scss';
-import useBreakpoint from 'src/hooks/useBreakpoint';
+import useBreakpoint from '../../hooks/useBreakpoint';
 import {
   Button,
   InputSelect,
@@ -19,7 +18,7 @@ import {
   TiktokLogo,
   YoutubeLogo,
 } from '@phosphor-icons/react/dist/ssr';
-import contactContent from 'src/content/contact.json';
+import contactContent from '../../content/contact.json';
 // import ContactForm from '../ContactForm/ContactForm';
 
 const contact = contactContent;

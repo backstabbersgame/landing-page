@@ -2,15 +2,15 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from 'src/store';
-import { setAddressField } from 'src/store/addressSlice';
-import { fetchAddressByCep } from 'src/store/addressThunk';
-import { formatCep } from 'src/utils/formatCep';
+import { AppDispatch, RootState } from '../../store';
+import { setAddressField } from '../../store/addressSlice';
+import { fetchAddressByCep } from '../../store/addressThunk';
+import { formatCep } from '../../utils/formatCep';
 import { InputText, Button } from '@backstabbersgame/design-system';
-import { addressFields } from 'src/constants/addressFields';
-import { Address } from 'src/types/address';
+import { addressFields } from '../../constants/addressFields';
+import { Address } from '../../types/address';
 import * as yup from 'yup';
-import { stepTwoSchema } from 'src/constants/validationSchema';
+import { stepTwoSchema } from '../../constants/validationSchema';
 import { yupResolver } from '@hookform/resolvers/yup';
 import styles from './StepTwoForm.module.scss';
 

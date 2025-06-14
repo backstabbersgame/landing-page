@@ -1,11 +1,10 @@
 'use client';
 
 import React from 'react';
-
 import Image from 'next/image';
 import styles from './Store.module.scss';
-import useBreakpoint from 'src/hooks/useBreakpoint';
-import storeContent from 'src/content/store.json';
+import useBreakpoint from '../../hooks/useBreakpoint';
+import storeContent from '../../content/store.json';
 
 const store = storeContent;
 

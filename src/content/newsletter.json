@@ -11,5 +11,10 @@
     "alt": "Personagem",
     "mobile": "/images/mobile/dealer.png",
     "desktop": "/images/desktop/dealer.png"
+  },
+  "message": {
+    "success": "Obrigado por se inscrever!",
+    "error": "Erro ao salvar. Tente novamente.",
+    "invalid": "Por favor, insira um e-mail válido."
   }
 }

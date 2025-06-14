@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-
 import styles from './Footer.module.scss';
 import Image from 'next/image';
 import { Button } from '@backstabbersgame/design-system';
@@ -19,8 +18,8 @@ import {
   UsersThree,
   YoutubeLogo,
 } from '@phosphor-icons/react/dist/ssr';
-import useBreakpoint from 'src/hooks/useBreakpoint';
-import footerContent from 'src/content/footer.json';
+import useBreakpoint from '../../hooks/useBreakpoint';
+import footerContent from '../../content/footer.json';
 
 const footer = footerContent;
 const Footer = () => {

@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-
 import Image from 'next/image';
 import styles from './About.module.scss';
 import { Button } from '@backstabbersgame/design-system';
-import useBreakpoint from 'src/hooks/useBreakpoint';
-import aboutContent from 'src/content/about.json';
+import useBreakpoint from '../../hooks/useBreakpoint';
+import aboutContent from '../../content/about.json';
 
 const about = aboutContent;
 
